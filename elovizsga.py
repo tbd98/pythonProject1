@@ -59,4 +59,28 @@ class Foglalas:
         self.datum = datum
 
 
+def menu():
+    print("Válassz műveletet az alábbi lehetőségek közül:")
+    print("0 - Kilépés")
+    print("1 - Foglalás")
+    print("2 - Lemondás")
+    print("3 - Foglalások listázása")
+
+my_szalloda = Szalloda("Bence's Hotel")
+egyik_egyagyas_szoba = EgyagyasSzoba(11,1000)
+masik_egyagyas_szoba = EgyagyasSzoba(12,1000)
+ketagyas_szoba = KetagyasSzoba(21,500)
+menu()
+valasztas = input()
+while True:
+    if valasztas == "0":
+        break
+    menu()
+    valasztas = input()
+    if valasztas == "1":
+        sorszam = input("szobaszám a szobához:")
+        datum = input("dátum a foglaláshoz 2023-11-30 formátumban")
+        foglalas = Foglalas(sorszam, datum)
+
+
 print("Tóth Bence Dániel, RU1BB4, mérnökinformatikus BSc.")
